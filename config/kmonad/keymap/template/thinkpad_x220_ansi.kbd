@@ -1,0 +1,64 @@
+(defcfg
+	input (device-file "/dev/input/by-path/platform-i8042-serio-0-event-kbd")
+	output (uinput-sink "KMonad kbd")
+	fallthrough false
+	allow-cmd false
+)
+
+(defalias
+
+fn1 (layer-toggle func1)
+fn2 (layer-toggle func2)
+
+lmt (tap-hold-next-release 250 a lmet)
+lat (tap-hold-next-release 250 r lalt)
+lcl (tap-hold-next-release 250 s lctl)
+lst (tap-hold-next-release 250 t lsft)
+rst (tap-hold-next-release 250 n rsft)
+rcl (tap-hold-next-release 250 e rctl)
+rat (tap-hold-next-release 250 i lalt)
+rmt (tap-hold-next-release 250 o rmet)
+)
+
+(defsrc
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =        bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [     ]        \
+  caps a    s    d    f    g    h    j    k    l    ;    '     	   ret
+  lsft z    x    c    v    b    n    m    ,    .    /              rsft
+  wkup lctl lmet lalt           spc            ralt cmps rctl      back up   fwd
+                                                                   left down rght
+)
+
+(deflayer colemak-mod-dh
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =        bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    [     ]        \
+  caps @lmt @lat @lcl @lst g    m    @rst @rcl @rat @rmt '         ret
+  z    x    c    d    v    z    k    h    ,    .    /              rsft
+  wkup lctl lmet @fn1           spc            @fn2 rmet rctl      back up   fwd
+                                                                   left down rght
+)
+(deflayer func1
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =        bspc
+  tab  1    2    3    4    5    6    7    8    9    0    [     ]        \
+  caps $    +    \(   \)   @    |    -    =    \_   *    '         ret
+  lsft !    #    {    }    "    &    [    ]    %    '              rsft
+  wkup lctl lmet _           bspc         _         rmet rctl      back up   fwd
+                                                                   left down rght
+)
+
+(deflayer func2
+  esc  mute vold volu                          prnt slck pause ins del  home pgup
+       f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11   f12      end  pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -     =        bspc
+  tab  _    _    _    _    _    _    _    _    _    _    [     ]        \
+  caps _    _    esc  tab  _    left down up   rght ret  '         ret
+  lsft _    caps del  `    ~    ^    back fwd  _    \\             rsft
+  wkup lctl lmet _           _            _   rmet rctl            back up   fwd
+                                                                   left down rght
+)

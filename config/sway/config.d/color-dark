@@ -1,0 +1,17 @@
+client.focused #ffffff #ffffff #000000 #fc2d2d
+client.unfocused #000000 #000000 #ffffff
+client.focused_inactive #000000 #000000 #ffffff
+
+
+# bar-dark
+bar {
+	position top
+	status_command while /home/monochrome/Documents/Scripts/barstats; do sleep 1; done
+	colors {
+        	statusline #ffffff
+        	background #000000
+        	inactive_workspace #000000 #000000 #ffffff
+		focused_workspace #ffffff #ffffff #000000
+    }
+}
+

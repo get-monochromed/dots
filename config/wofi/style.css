@@ -1,0 +1,48 @@
+* { 
+/* font: ibm plex mono; */
+font: "Monospace Bold";
+font-size:12;
+}
+#window {
+margin: 0px;
+background-color: transparent;
+}
+
+#input {
+margin: 5px;
+border: none;
+color: white;
+background-color: black;
+}
+
+#inner-box {
+margin: 5px;
+border: none;
+background-color: black;
+}
+
+#outer-box {
+margin: 1px;
+border: none;
+background-color: transparent;
+}
+
+#scroll {
+margin: 0px;
+border: none;
+}
+
+#text {
+margin: 5px;
+border: none;
+color: white;
+} 
+
+#entry:selected {
+background-color: white;
+color: black;
+}
+
+#text:selected{
+color: black;
+}

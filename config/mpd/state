@@ -1,0 +1,30 @@
+sw_volume: 100
+audio_device_state:1:My Pulse Output
+audio_device_state:1:Visualizer feed
+state: pause
+current: 14
+time: 72.473000
+random: 0
+repeat: 0
+single: 0
+consume: 0
+crossfade: 0
+mixrampdb: 0.000000
+mixrampdelay: -1.000000
+playlist_begin
+0:Counting Sheep (V2) [2018 Export Wav] - Flume  Injury Reserve [USA2P2307202] (FLAC).flac
+1:Nice 2 Know U 1.5.3 [2020 Export Wav] - Flume [USA2P2307201] (FLAC).flac
+2:Why 1.3 [2012 Export Wav] - Flume [USA2P2307199] (FLAC).flac
+3:Rhinestone 1.7.2 [2018 Export Wav] - Flume  Isabella Manfredi [USA2P2307208] (FLAC).flac
+4:Dream 1.2.2 [2016 Export Wav] - Flume [USA2P2307207] (FLAC).flac
+5:beat 58 1.1 [2020 Export Wav] - Flume [USA2P2307205] (FLAC).flac
+6:Close 1.2 [2016 Export Wav] - Flume [USA2P2307200] (FLAC).flac
+7:One Step Closer 1.4 [2021 Export Wav] - Flume  Panda Bear [USA2P2307206] (FLAC).flac
+8:SPOKE 2 ALIENS FINALLY 1.3 [2020 Export Wav] - Flume [USA2P2307203] (FLAC).flac
+9:Things Don't Always Go The Way You Plan 1.2 [2020 Export Wav] - Flume [USA2P2307204] (FLAC).flac
+10:Aimer - escalate.flac
+11:Air Drums - ALRT [CA5KR2321942] (FLAC).flac
+12:Aimer - I beg you.flac
+13:Aimer - escalate.flac
+14:Aimer - I beg you.flac
+playlist_end

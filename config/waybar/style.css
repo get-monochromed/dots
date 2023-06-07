@@ -1,0 +1,105 @@
+* {
+    font-family: Terminus, Iosevka Nerd Font;
+    font-size: 11px;
+    font-weight: bold; 
+}
+#clock,
+#battery,
+#temperature,
+#custom-memory,
+#custom-usage,
+#custom-fanspeed,
+#custom-cpubar,
+#custom-layout,
+#custom-clock,
+#custom-recorder,
+#idle_inhibitor,
+#backlight,
+#network,
+#pulseaudio,
+#tray,
+#mode {
+    padding: 0 10px;
+    color: white;
+    background-color: black;
+}
+window#waybar {
+    color: white;
+    background-color: black;
+}
+
+#idle_inhibitor {
+    background-color: black;
+}
+
+#idle_inhibitor.activated {
+    background-color: white;
+    color:black;
+}
+window#waybar.hidden {
+    opacity: 1;
+}
+
+#workspaces button {
+    padding: 0 3;
+    color: white;   
+    border-radius: 0px;
+}
+
+#workspaces button.focused {
+    background-color: white;
+    color: black;
+}
+
+#workspaces button.urgent {
+    background-color: red;
+    color: white;
+}
+
+#battery.charging, #battery.plugged {
+    background-color: white;
+    color:black;
+}
+
+#battery.warning:not(.charging) {
+    background-color: orange;
+    color: black;
+    }
+@keyframes blink {
+    to {
+        background-color: black;
+        color: white;
+    }
+}
+
+#battery.critical:not(.charging) {
+    background-color: red;
+    color:white; 
+}
+
+#network {
+}
+#network.disconnected {
+    background-color: white;
+    color: black;
+}
+
+#temperature.critical {
+    background-color: red;
+    color: white;
+}
+
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+}
+
+#custom-recorder {
+	color: red;
+}
+

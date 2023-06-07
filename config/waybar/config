@@ -1,0 +1,174 @@
+{
+ 	"layer": "top", 		// Waybar at top layer
+	"position": "top", 		// Waybar position (top|bottom|left|right)
+	"height": 26, 			// Waybar height (to be removed for auto height)
+	"spacing": 0, 			// Gaps between modules (4px)
+    	"margin-top": 0,
+    	"margin-bottom":0, 
+	"modules-left": ["sway/workspaces","idle_inhibitor","mpd","custom/recorder"],
+	//"modules-right": ["custom/cpubar","custom/memory","temperature","custom/fanspeed","network","custom/usage","battery","pulseaudio","clock","tray"],
+	"modules-right": ["custom/cpubar","custom/memory","network","battery","pulseaudio","clock","tray"],
+
+// Modules configuration
+
+"mpd": {
+	"format":" {artist} - {title} {stateIcon}",
+        "format-disconnected": "Disconnected",
+        "format-stopped": "",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": " ",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+},
+
+"sway/workspaces": {
+	"disable-scroll": true,
+	"format": "{name}",
+},
+
+"sway/window": {
+	"format":"{}",
+	"max-length":50,
+},
+
+"sway/mode": {
+	"format": "<span style=\"italic\">{}</span>",
+},
+
+
+"tray": {
+	// "icon-size": 21,
+	"spacing": 10,
+},
+
+
+"clock": {
+	"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%I:%M %p}",
+	"format-alt": "{:%Y %B %d %A}",
+},
+
+"idle_inhibitor": {
+       "format": "{icon}",
+       "format-icons": {
+           "activated": " ",
+           "deactivated": " ",
+       },
+},
+
+"temperature": {
+	"hwmon-path":"/sys/class/thermal/thermal_zone0/temp",
+	"critical-threshold":80,
+	"format-critical": "CRIT {temperatureC}°C",
+	"format": "TEMP {temperatureC}°C",
+	"tooltip": false,
+	},
+
+
+"backlight": {
+	"format": "BKLT {percent}%",
+	"on-scroll-up": "brightnessctl s +2%",
+	"on-scroll-down": "brightnessctl s 2%-",
+	"scroll-step": 1,
+	"smooth-scrolling-threshold": 1,
+	"tooltip": false,
+},
+
+
+"battery": {
+	"states": {
+		"good": 95,
+		"warning": 30,
+		"critical": 20,
+	 },
+	"format": "BAT {capacity}%",
+	"format-charging": "BAT {capacity}%",
+	"format-plugged": "~ {capacity}%",
+	"format-critical": "BAT {capacity}%",
+	"format-alt": "{time}",
+	"interval": 1,
+},
+
+
+"network": {
+	"format-wifi": " {essid} {bandwidthDownBits} {bandwidthUpBits}",
+	"format-ethernet": "ETH {bandwidthDownBits} {bandwidthUpBits}",
+	"format-disconnected": "DEAD",
+	"interval":1,
+	"tooltip": false,
+	"on-click": "/home/monochrome/Documents/Scripts/rofi-wifi",
+	
+},
+"pulseaudio": {
+	"scroll-step": 1,
+	"format": "VOL {volume}%", 
+	"format-muted": "MUTE",
+	"on-click": "footclient -- pulsemixer",
+	},
+
+//custom
+
+"custom/memory": { 
+	"exec": "free -h | grep 'Mem' | cut -d' ' -f19",
+	"format": "MEM {}",
+	"interval": 3,
+	"on-click": "footclient -- sudo btop --utf-force",
+	"tooltip": false,
+},
+
+"custom/usage": {
+	"exec": "/home/monochrome/Documents/Scripts/usage",
+	"format": "{}",
+	"interval": 1,
+	"tooltip": false,
+},
+
+"custom/cpubar": {
+	"exec": "/home/monochrome/Documents/Scripts/cpubar",
+	"format": "CPU {}",
+	"interval": 1,
+	"on-click": "footclient -- sudo btop --utf-force",
+	"tooltip": false,
+},
+
+"custom/fanspeed": {
+	"exec": "sensors | grep fan1 | awk '{print $2}'",
+	"format": "FAN {}",
+	"interval": 1,
+	"on-click": "exec /home/monochrome/Documents/Scripts/fan-go-brrrr",
+	"tooltip": false,
+	},
+
+"custom/recorder": {
+	"format": "REC",
+	"return-type": "json",
+	"interval": 1,
+	"exec": "echo '{\"class\": \"recording\"}'",
+	"exec-if": "pgrep wf-recorder",
+	"tooltip": false,
+	},
+
+"custom/clock":{
+	"exec": "date",
+	"interval": 1,
+	"tooltip": false,
+	},
+}
+

@@ -1,0 +1,73 @@
+
+# ________/\\\\\___________________________________________        
+#  ______/\\\///____________________________________________       
+#   _____/\\\______________________________________/\\\______      
+#    __/\\\\\\\\\_______/\\\\\________/\\\\\_____/\\\\\\\\\\\_     
+#     _\////\\\//______/\\\///\\\____/\\\///\\\__\////\\\////__    
+#      ____\/\\\_______/\\\__\//\\\__/\\\__\//\\\____\/\\\______   
+#       ____\/\\\______\//\\\__/\\\__\//\\\__/\\\_____\/\\\_/\\__  
+#        ____\/\\\_______\///\\\\\/____\///\\\\\/______\//\\\\\___ 
+#         ____\///__________\/////________\/////_________\/////____
+#
+
+font= Terminus:size=9,Iosevka Nerd Font:size=9,Noto Color Emoji:style=Regular,feather:style:Regular
+dpi-aware=false
+pad=10x10                             # optionally append 'center'
+bold-text-in-bright=yes
+
+[cursor]
+blink=yes
+
+[mouse]
+hide-when-typing=yes
+
+[colors]
+alpha=1
+
+foreground=ffffff
+background=000000
+
+# regular0=000000  # black
+# regular1=999999  # red
+# regular2=aaaaaa  # green
+# regular3=bbbbbb  # yellow
+# regular4=cccccc  # blue
+# regular5=dddddd  # magenta
+# regular6=eeeeee  # cyan
+# regular7=ffffff  # white
+# 
+# bright0=000000  # bright black
+# bright1=999999  # bright red
+# bright2=aaaaaa  # bright green
+# bright3=bbbbbb  # bright yellow
+# bright4=cccccc  # bright blue
+# bright5=dddddd  # bright magenta
+# bright6=eeeeee  # bright cyan
+# bright7=ffffff  # bright white
+
+regular0=000000  # black
+regular1=ffffff  # red
+regular2=ffffff  # green
+regular3=ffffff  # yellow
+regular4=ffffff  # blue
+regular5=ffffff  # magenta
+regular6=ffffff  # cyan
+regular7=ffffff  # white
+
+bright0=000000  # bright black
+bright1=ffffff  # bright red
+bright2=ffffff  # bright green
+bright3=ffffff  # bright yellow
+bright4=ffffff  # bright blue
+bright5=ffffff  # bright magenta
+bright6=ffffff  # bright cyan
+bright7=ffffff  # bright white
+[key-bindings]
+scrollback-up-page=none
+scrollback-up-half-page=Mod1+Shift+e
+scrollback-up-line=Mod1+e
+scrollback-down-page=none
+scrollback-down-half-page=Mod1+Shift+n
+scrollback-down-line=Mod1+n
+show-urls-copy=Control+Shift+u
+show-urls-launch=none

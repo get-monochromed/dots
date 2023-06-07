@@ -1,0 +1,72 @@
+
+# ________/\\\\\___________________________________________        
+#  ______/\\\///____________________________________________       
+#   _____/\\\______________________________________/\\\______      
+#    __/\\\\\\\\\_______/\\\\\________/\\\\\_____/\\\\\\\\\\\_     
+#     _\////\\\//______/\\\///\\\____/\\\///\\\__\////\\\////__    
+#      ____\/\\\_______/\\\__\//\\\__/\\\__\//\\\____\/\\\______   
+#       ____\/\\\______\//\\\__/\\\__\//\\\__/\\\_____\/\\\_/\\__  
+#        ____\/\\\_______\///\\\\\/____\///\\\\\/______\//\\\\\___ 
+#         ____\///__________\/////________\/////_________\/////____
+#
+
+font= Terminus:size=9,Iosevka Nerd Font:size=9,Noto Color Emoji:style=Regular,feather:style:Regular
+dpi-aware=false
+pad=10x10                             # optionally append 'center'
+bold-text-in-bright=yes
+
+[cursor]
+blink=yes
+
+[mouse]
+hide-when-typing=yes
+# alternate-scroll-mode=yes
+
+[colors]
+alpha=1
+
+foreground=000000
+background=ffffff
+
+# regular0= 000000  # black
+# regular1= 111111  # red
+# regular2= 222222  # green
+# regular3= 333333  # yellow
+# regular4= 444444 # blue
+# regular5= 555555 # magenta
+# regular6= 666666 # cyan
+# regular7= 777777 # white
+# 
+# bright0= 000000 # bright black
+# bright1= 111111 # bright red
+# bright2= 222222 # bright green
+# bright3= 333333 # bright yellow
+# bright4= 444444 # bright blue
+# bright5= 555555 # bright magenta
+# bright6= 666666 # bright cyan
+# bright7= 777777 # bright white
+
+regular0= ffffff  # black
+regular1= 000000  # red
+regular2= 000000  # green
+regular3= 000000  # yellow
+regular4= 000000 # blue
+regular5= 000000 # magenta
+regular6= 000000 # cyan
+regular7= 000000 # white
+
+bright0= ffffff # bright black
+bright1= 000000 # bright red
+bright2= 000000 # bright green
+bright3= 000000 # bright yellow
+bright4= 000000 # bright blue
+bright5= 000000 # bright magenta
+bright6= 000000 # bright cyan
+bright7= 000000 # bright white
+[key-bindings]
+scrollback-up-page=none
+scrollback-up-half-page=Mod1+Shift+e
+scrollback-up-line=Mod1+e
+scrollback-down-page=none
+scrollback-down-half-page=Mod1+Shift+n
+scrollback-down-line=Mod1+n
