@@ -1,3 +1,5 @@
 /config/obsidian/
 /config/transmission/
 /config/transmission-daemon/
+/config/shell_gpt/.sgptrc
+/config/syncthing/
